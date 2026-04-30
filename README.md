@@ -1,34 +1,22 @@
-To build Qt (themself) with widgets for Ubuntu 24 (X11 windowing system), tested with 22.04.3 LTS. See also [Building Qt 6.8 LTS for Raspberry Pi on Raspberry Pi OS](https://www.tal.org/tutorials/building-qt-66-raspberry-pi-raspberry-pi-os).
-
-## Ubuntu with X11
-Please switch to Xorg istead of Wayland. 
-<p align="center">
-  <img alt="How switch to X11 in Ubuntu" src="img/How switch to X11 in Ubuntu.png" width="320">
-  <br>
-    <em>How switch to X11 in Ubuntu</em>
-</p>
+To build Qt (themself) with widgets for Ubuntu 26 (Wayland), tested with 26.04. See also [Building Qt 6.8 LTS for Raspberry Pi on Raspberry Pi OS](https://www.tal.org/tutorials/building-qt-66-raspberry-pi-raspberry-pi-os).
 
 Test
 ```
 echo $XDG_SESSION_TYPE
 ```
-Should be x11  
+Should be wayland  
+
 ## dev pack
 ### modern Ubuntu
 Then make available all dev pack. For Ubuntu 24 and more new
 ```
 sudo sed -i 's/^Types: deb$/Types: deb deb-src/' /etc/apt/sources.list.d/ubuntu.sources
 ```
-### old Ubuntu
-```
-sudo nano /etc/apt/sources.list
-```
-and uncomment all strings with "deb-src"
 
 ## Prepare
 ```
-git clone https://github.com/AndreiCherniaev/Ubuntu_X11_Build_Qt_widgets.git
-export MyBaseDir="$PWD/Ubuntu_X11_Build_Qt_widgets"
+git clone https://github.com/AndreiCherniaev/Ubuntu_Wayland_Build_Qt_widgets.git
+export MyBaseDir="$PWD/Ubuntu_Wayland_Build_Qt_widgets"
 ```
 
 ## Build Qt themself
@@ -52,13 +40,3 @@ export QT_DEBUG_PLUGINS=1 #usually no need, use in case of error
   <br>
     <em>example application</em>
 </p>
-
-## linuxFB
-This step is optional. If you want try to run your app with linuxfb then use
-```
-# sudo adduser $USER video
-export QT_DEBUG_PLUGINS=1
-# export QT_QPA_PLATFORM=linuxfb
-# export QT_QPA_EGLFS_FB=/dev/fb0
-"$MyBaseDir/example/readme.sh"
-```
