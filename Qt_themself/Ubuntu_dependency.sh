@@ -10,11 +10,8 @@ sudo sed -i 's/^Types: deb$/Types: deb deb-src/' /etc/apt/sources.list.d/ubuntu.
 sudo apt update
 
 # Thanks https://doc.qt.io/qt-6/wayland-requirements.html
-sudo apt install -y libwayland-dev libegl1-mesa-dev qtwayland5-dev-tools
-
-sudo apt-get install libmd4c-html0 -y
+sudo apt install -y libwayland-dev libegl1-mesa-dev qtwayland5-dev-tools libmd4c-html0 libfreetype6-dev python3-pip
 # Install cmake, ninja 
-sudo apt install python3-pip -y
 pip install cmake ninja --break-system-packages
 
 # Unfortunately pip install to some path which is not in PATH. So Ubuntu not find your application, add pip folder to PATH
@@ -28,5 +25,3 @@ EOF'
 # To make "source" works we should run this script with dot 
 # . "$MyBaseDir/Qt_themself/Ubuntu_dependency.sh"
 source /etc/profile.d/local_bin_to_PATH.sh
-
-# sudo apt install libfreetype* #usually no need
