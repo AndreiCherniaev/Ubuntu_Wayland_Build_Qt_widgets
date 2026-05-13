@@ -1,4 +1,4 @@
-To build Qt (themself) with widgets for Ubuntu 26 (Wayland), tested with 26.04. See also [Building Qt 6.8 LTS for Raspberry Pi on Raspberry Pi OS]([https://www.tal.org/tutorials/building-qt-66-raspberry-pi-raspberry-pi-os](https://www.tal.org/tutorials/building-qt-6-8-raspberry-pi).
+To build Qt (themself) with widgets for Ubuntu 26 (Wayland), tested with 26.04. See also [Building Qt 6.8 LTS for Raspberry Pi on Raspberry Pi OS](https://www.tal.org/tutorials/building-qt-6-8-raspberry-pi).
 
 Test
 ```
