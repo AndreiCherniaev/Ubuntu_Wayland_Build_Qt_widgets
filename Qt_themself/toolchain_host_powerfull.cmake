@@ -39,8 +39,6 @@ set(BUILD_SHARED_LIBS ON) #Build Qt statically (OFF) or dynamically (ON)
 #no qmake
 #set(FEATURE_qmake OFF)
 
-set(CMAKE_C_FLAGS_INIT "static")
-set(CMAKE_CXX_FLAGS_INIT "static")
 set(CMAKE_BUILD_TYPE "Debug")
 
 include(CMakeInitializeConfigs)
