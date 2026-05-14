@@ -6,13 +6,6 @@ echo $XDG_SESSION_TYPE
 ```
 Should be wayland  
 
-## dev pack
-### modern Ubuntu
-Then make available all dev pack. For Ubuntu 24 and more new
-```
-sudo sed -i 's/^Types: deb$/Types: deb deb-src/' /etc/apt/sources.list.d/ubuntu.sources
-```
-
 ## Prepare
 ```
 git clone https://github.com/AndreiCherniaev/Ubuntu_Wayland_Build_Qt_widgets.git
