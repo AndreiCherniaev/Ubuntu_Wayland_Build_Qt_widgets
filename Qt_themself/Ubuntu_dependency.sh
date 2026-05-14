@@ -10,7 +10,7 @@ sudo sed -i 's/^Types: deb$/Types: deb deb-src/' /etc/apt/sources.list.d/ubuntu.
 sudo apt update
 
 # Thanks https://doc.qt.io/qt-6/wayland-requirements.html
-sudo apt install -y libwayland-dev libegl1-mesa-dev qtwayland5-dev-tools libmd4c-html0 libfontconfig1-dev libfreetype6-dev python3-pip
+sudo apt install -y libwayland-dev libegl1-mesa-dev qtwayland5-dev-tools libmd4c-html0 libfontconfig1-dev libfreetype6-dev libxkbcommon-dev python3-pip
 # Install cmake, ninja 
 pip install cmake ninja --break-system-packages
 
