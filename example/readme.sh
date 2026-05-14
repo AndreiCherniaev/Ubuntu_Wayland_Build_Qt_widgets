@@ -4,6 +4,7 @@ if [[ "$MyBaseDir" == *"$HOME"* ]]; then
     cross_user_path="\$HOME${MyBaseDir#*$HOME}"
 fi
 
+export QT_DEBUG_PLUGINS=1
 "$MyBaseDir/Qt_themself/build_artifacts_host_powerfull/bin/qt-cmake" -S "$MyBaseDir/example/src" -B "$MyBaseDir/example/build-host" -DCMAKE_BUILD_TYPE=Release --fresh
 cmake --build "$MyBaseDir/example/build-host" --parallel
 cpack -G DEB --config "$MyBaseDir/example/build-host/CPackConfig.cmake" -B "$MyBaseDir/example/build-host/"
